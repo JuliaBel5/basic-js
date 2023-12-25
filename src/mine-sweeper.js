@@ -24,12 +24,11 @@ const { NotImplementedError } = require("../extensions/index.js");
  * ]
  */
 function minesweeper(matrix) {
-  let res;
-  if (matrix[2]) {
-    res = [[], [], []];
-  } else {
-    res = [[], []];
+  let res = [];
+  for (let i = 0; i < matrix.length; i += 1) {
+    res.push([]);
   }
+
   let i = 1;
   let j = 1;
   if (matrix[i - 1][j]) {
